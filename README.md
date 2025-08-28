@@ -1,18 +1,17 @@
-## Getting Started
+### Context:
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+*"Imagine you are working in a small online store project. The system must manage products: we need to register a product, sell units, add new stock and show the product information."*
 
-## Folder Structure
+### Task (in English):
 
-The workspace contains two folders by default, where:
+1. Create a class called **Product** with the following attributes: `name`, `price`, `quantity`.
+2. Implement the following methods:
+    - `sell(int amount)` → decreases quantity if enough stock is available.
+    - `restock(int amount)` → increases quantity.
+    - `showProduct()` → prints product info.
+3. Create two **objects** of type Product with different values.
+4. Test all the methods.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+### Bonus (for fast students):
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Add a condition in `sell()` to print a message when the stock is not enough.

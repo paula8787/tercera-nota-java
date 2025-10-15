@@ -1,22 +1,26 @@
 package semana03.Company.Main;
 
-import semana03.Company.hr.Employee;
+import semana03.Company.Class.Employee;
 
 public class Main {
     public static void main(String[] args) {
-        Employee emp1 = new Employee("Alice", "Developer", 70000);
-        Employee emp2 = new Employee("Bob", "Designer", 65000);
-        
-        emp1.displayInfo();
-        emp2.displayInfo();
+        // Crear una instancia de Company
+        Employee myCompany = new Employee("Tech Solutions", "123 Tech Street", 50);
 
-        emp1.increaseSalary(5000);
-        emp2.increaseSalary(3000);
+        // Acceder y modificar atributos usando getters y setters
+        System.out.println("Company Name: " + myCompany.companyName);
+        System.out.println("Address: " + myCompany.getAddress());
+        System.out.println("Employee Count: " + myCompany.getEmployeeCount());
 
-        emp1.setRole("Senior Developer");
+        // Modificar la dirección
+        myCompany.setAddress("456 New Tech Avenue");
+        System.out.println("Updated Address: " + myCompany.getAddress());
 
-        System.out.println("\nAfter updates:");
-        emp1.displayInfo();
-        emp2.displayInfo();
+        // Incrementar el conteo de empleados
+        myCompany.incrementEmployeeCount(10);
+        System.out.println("Updated Employee Count: " + myCompany.getEmployeeCount());
+
+        // Intentar establecer un conteo de empleados negativo
+        myCompany.setEmployeeCount(-5); // Debería mostrar un mensaje de error
     }
-    }
+}

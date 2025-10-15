@@ -1,15 +1,14 @@
-package bin.semana05.Carro.PasoPorReferencia;
-
+package semana04.PasoxReferencia;
 public class Box {
     int size;
-
     public Box(int size) {
         this.size = size;
     }
-    public void increaseSide(int increment) {
+    public void increaseSize(int increment) {
         this.size += increment;
     }
     public int size() {
-        return this.size;
+        return size;
     }
+
 }

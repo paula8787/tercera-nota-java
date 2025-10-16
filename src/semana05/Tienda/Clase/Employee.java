@@ -1,18 +1,36 @@
-package semana05.employee;
+package semana05.Tienda.Clase;
 
 public class Employee {
-    String name;
-    String Role;
-    double salary;
+    private String name;
+    private String role;
+    private double salary;
 
-    public void ShowResponsability() {
-        System.out.println("Employee name: " + name + ", Role: " + Role + ", Salary: " + salary);
+    public Employee(String name, String role, double salary) {
+        this.name = name;
+        this.role = role;
+        this.salary = salary;
+    }
 
-        switch (Role) {
+    public String getName() {
+        return name;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void showResponsibility() {
+        System.out.println("Employee name: " + name + ", Role: " + role + ", Salary: " + salary);
+
+        switch (role) {
             case "Manager":
                 System.out.println("Responsibility: Maneja el equipo.");
                 break;
-            
+
             case "Developer":
                 System.out.println("Responsibility: Escribe y mantiene el código.");
                 break;
@@ -24,7 +42,10 @@ public class Employee {
             default:
                 System.out.println("Responsibility: No especificada.");
         }
-        
     }
 
+    @Override
+    public String toString() {
+        return String.format("%s (%s) - %.2f", name, role, salary);
+    }
 }

@@ -1,7 +1,7 @@
 package semana01;
 
 public class Ejercicio1 {
-     public static class BankAccount  {
+    public static class BankAccount  {
         // Atributos
         String accountNumber ;
         String owner;

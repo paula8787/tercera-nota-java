@@ -1,4 +1,4 @@
-package Practicas.semana04.PasoxReferencia;
+package practicas.semana04.PasoxReferencia;
 public class Box {
     int size;
     public Box(int size) {

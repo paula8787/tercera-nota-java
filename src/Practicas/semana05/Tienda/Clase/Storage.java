@@ -1,4 +1,4 @@
-package Practicas.semana05.Tienda.Clase;
+package practicas.semana05.Tienda.Clase;
 
 public class Storage {
     private String product;

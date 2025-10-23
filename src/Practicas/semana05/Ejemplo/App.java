@@ -1,6 +1,6 @@
-package Practicas.semana05.Ejemplo;
+package practicas.semana05.Ejemplo;
 
-import Practicas.semana05.Ejemplo.Class.Student;
+import practicas.semana05.Ejemplo.Class.Student;
 
 public class App {
     public static void main(String[] args) {

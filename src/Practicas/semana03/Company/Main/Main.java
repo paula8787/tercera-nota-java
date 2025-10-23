@@ -1,6 +1,6 @@
-package Practicas.semana03.Company.Main;
+package practicas.semana03.Company.Main;
 
-import Practicas.semana03.Company.Class.Employee;
+import practicas.semana03.Company.Class.Employee;
 
 public class Main {
     public static void main(String[] args) {

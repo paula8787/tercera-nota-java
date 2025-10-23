@@ -1,4 +1,4 @@
-package Practicas.semana05.Ejemplo.Class;
+package practicas.semana05.Ejemplo.Class;
 
 public class Student {
     String name;

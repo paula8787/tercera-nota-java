@@ -1,6 +1,6 @@
-package Practicas.semana05.Tienda;
+package practicas.semana05.Tienda;
 
-import Practicas.semana05.Tienda.Clase.Storage;
+import practicas.semana05.Tienda.Clase.Storage;
 
 public class App {
     public static void main(String[] args) {

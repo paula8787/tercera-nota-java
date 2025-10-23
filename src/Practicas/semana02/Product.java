@@ -1,4 +1,4 @@
-package Practicas.semana02;
+package practicas.semana02;
 
 public class Product {
     String name;

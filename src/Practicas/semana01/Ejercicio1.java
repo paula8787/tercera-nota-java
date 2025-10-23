@@ -1,4 +1,4 @@
-package Practicas.semana01;
+package practicas.semana01;
 
 public class Ejercicio1 {
     public static class BankAccount  {

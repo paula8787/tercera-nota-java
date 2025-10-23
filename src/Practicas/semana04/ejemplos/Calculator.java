@@ -1,4 +1,4 @@
-package Practicas.semana04.ejemplos;
+package practicas.semana04.ejemplos;
 
 public class Calculator {
     public int add(int a, int b) {

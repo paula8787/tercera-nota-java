@@ -1,4 +1,4 @@
-package Practicas.semana03.Company.Class;
+package practicas.semana03.Company.Class;
 
 public class Employee {
     public String companyName;

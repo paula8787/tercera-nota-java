@@ -1,4 +1,4 @@
-package Practicas.semana02;
+package practicas.semana02;
 public class Ejercicio1 {
 
     public static void main(String[] args) {

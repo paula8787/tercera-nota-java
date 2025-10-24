@@ -1,78 +1,53 @@
 package unidad3.actividad1.utils;
 
 public class SafeCalculator {
+
     public double divide(int a, int b) throws InvalidInputException {
-        System.out.println("\n╔════════════════════════════════════════════════════════╗");
-        System.out.println("║              PERFORMING DIVISION                       ║");
-        System.out.println("╚════════════════════════════════════════════════════════╝");
-        System.out.printf("  Operation: %d ÷ %d\n", a, b);
-        
-        double result = 0.0;
-        
         try {
+            // Validate inputs - check for negative numbers
             if (a < 0 || b < 0) {
                 throw new InvalidInputException(
-                    "ERROR: Negative numbers are not allowed! (a=" + a + ", b=" + b + ")"
+                    "Negative numbers are not allowed. Received: a=" + a + ", b=" + b
                 );
             }
             
-            result = (double) a / b;
-            
-            System.out.println("  Status: ✓ Success");
-            System.out.printf("  Result: %.2f\n", result);
+            // Perform division - this will throw ArithmeticException if b is 0
+            return (double) a / b;
             
         } catch (ArithmeticException e) {
-            System.out.println("  Status: ✗ Error");
-            System.out.println("  ⚠️  ArithmeticException: Division by zero is not allowed!");
-            System.out.println("  Message: " + e.getMessage());
-            result = Double.NaN; 
-
-        } catch (InvalidInputException e) {
-            System.out.println("  Status: ✗ Error");
-            System.out.println("  ⚠️  " + e.getMessage());
-            throw e; 
-            
+            System.out.println("Error: Cannot divide by zero!");
+            throw e; // Re-throw to let caller handle it
         } finally {
-            System.out.println("  " + "─".repeat(52));
-            System.out.println("  ► End of operation.");
-            System.out.println("╚════════════════════════════════════════════════════════╝");
+            System.out.println("End of operation.");
         }
-        
-        return result;
     }
     
-    public void performMultipleOperations(int a, int b) {
-        System.out.println("\n╔════════════════════════════════════════════════════════╗");
-        System.out.println("║         PERFORMING MULTIPLE OPERATIONS                 ║");
-        System.out.println("╚════════════════════════════════════════════════════════╝");
-        System.out.printf("  Numbers: a=%d, b=%d\n", a, b);
-        
+    /**
+     * Alternative method that handles all exceptions internally
+     * Returns a default value instead of throwing exceptions
+     */
+    public double divideSafe(int a, int b) {
         try {
             if (a < 0 || b < 0) {
-                throw new InvalidInputException("Negative numbers detected!");
+                throw new InvalidInputException(
+                    "Negative numbers are not allowed. Received: a=" + a + ", b=" + b
+                );
             }
-            
-            System.out.println("\n  Results:");
-            System.out.printf("    Addition: %d + %d = %d\n", a, b, a + b);
-            System.out.printf("    Subtraction: %d - %d = %d\n", a, b, a - b);
-            System.out.printf("    Multiplication: %d × %d = %d\n", a, b, a * b);
             
             if (b == 0) {
-                throw new ArithmeticException("Cannot divide by zero");
+                throw new ArithmeticException("Division by zero");
             }
-            System.out.printf("    Division: %d ÷ %d = %.2f\n", a, b, (double) a / b);
             
-            System.out.println("\n  ✓ All operations completed successfully!");
-            
-        } catch (ArithmeticException e) {
-            System.out.println("\n  ✗ ArithmeticException: " + e.getMessage());
+            return (double) a / b;
             
         } catch (InvalidInputException e) {
-            System.out.println("\n  ✗ InvalidInputException: " + e.getMessage());
-            
+            System.out.println("Invalid Input: " + e.getMessage());
+            return 0.0;
+        } catch (ArithmeticException e) {
+            System.out.println("Math Error: Cannot divide by zero!");
+            return 0.0;
         } finally {
-            System.out.println("  " + "─".repeat(52));
-            System.out.println("  ► End of operation.");
+            System.out.println("End of operation.");
         }
     }
 }

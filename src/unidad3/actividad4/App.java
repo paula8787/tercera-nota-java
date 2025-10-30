@@ -1,7 +1,6 @@
 package unidad3.actividad4;
 
-import unidad3.actividad4.models.Carro;
-import unidad3.actividad4.models.Moto;
+import unidad3.actividad4.models.*;
 
 public class App {
     public static void main(String[] args) {

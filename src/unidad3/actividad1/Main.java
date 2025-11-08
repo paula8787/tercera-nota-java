@@ -1,5 +1,7 @@
 package unidad3.actividad1;
-import InvalidInputException.java;
+
+import unidad3.actividad1.utils.InvalidInputException;
+import unidad3.actividad1.utils.SafeCalculator;
 
 public class Main {
     

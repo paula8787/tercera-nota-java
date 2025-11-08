@@ -26,7 +26,5 @@ public class Carro extends Vehiculo {
         }
     }
 }
-            System.out.println(getMarca() + " " + getModelo() + " acelerando. Velocidad actual: " + velocidad + " km/h");
-        else {
-            System.out.println("El vehículo está apagado. No se puede acelerar.");
-        }
+
+
